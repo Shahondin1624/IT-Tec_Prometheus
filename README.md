@@ -27,4 +27,4 @@
 6. Reboot your PI
 7. Run the project configuration script  
 7.1 Change into /scripts *cd scripts/*
-7.2 * ./ configure_project.sh*
+7.2 * ./ configure_project.sh*  
