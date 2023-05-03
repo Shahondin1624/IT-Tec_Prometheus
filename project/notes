@@ -1,0 +1,5 @@
+- Influx-Requesten 
+- oder halt Daten faken
+- Docker Compose (docker-drive)
+GET: curl 192.168.101.114:9000/api/v1/query?query=
+https://prometheus.io/docs/prometheus/latest/querying/api/

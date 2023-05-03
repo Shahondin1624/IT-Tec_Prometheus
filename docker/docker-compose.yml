@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - 9000:9090
+    volumes:
+      - /home/pi/IT-Tec_Prometheus/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --web.enable-lifecycle  --config.file=/home/pi/IT-Tec_Prometheus/prometheus/prometheus.yml
+
+volumes:
+  prometheus-data:
