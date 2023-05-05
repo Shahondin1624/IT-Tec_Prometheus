@@ -19,17 +19,42 @@
 
 2. Insert the MicroSD-Card into the PI and connect it to an power outlet  
 2.1 Wait until it has booted up completely  
+
 3. Now connect to the PI via SSH  
 3.1 Your computer has to be in the same network as the PI for this  
-3.2 *ssh <pi_username>@<pi_local_address>*  
+3.2 Connect to your Pi with ssh command  
+```
+ssh <pi_username>@<pi_local_address>
+```  
 3.3 copy the setup script to the PI and run it  
-3.3.1 *scp <path_to_the_setup_script> <pi_username>@<pi_local_address>:'<remote_path_for_setup_script>'*  
+```
+scp <path_to_the_setup_script> <pi_username>@<pi_local_address>:<remote_path_for_setup_script>
+```  
 3.4 make it executable  
-3.4.1 *chmod +x <setup_script_name>*  
-4. Run the setup script  
-4.1 *./ project_setup.sh*  
+```
+chmod +x <setup_script_name>
+```  
+
+
+4. Run the setup script
+```
+./ project_setup.sh
+```  
 5. Resolve any errors that *might* pop up during installation
+
+
 6. Reboot your PI
+```
+sudo reboot now
+```
+
+
 7. Run the project configuration script  
-7.1 Change into /scripts *cd scripts/*
-7.2 * ./ configure_project.sh*  
+7.1 Change into /scripts
+```
+cd scripts/
+```  
+7.2 run the script
+```
+./ configure_project.sh
+```
