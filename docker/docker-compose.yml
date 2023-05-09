@@ -10,7 +10,7 @@ services:
       - prometheus-data:/prometheus
     command: --web.enable-lifecycle  --config.file=/home/pi/IT-Tec_Prometheus/prometheus/prometheus.yml
   github-exporter:
-    image: infinitywork/github-exporter:latest
+    image: infinityworks/github-exporter:latest
     ports:
       - "9171:9171"
     expose:
