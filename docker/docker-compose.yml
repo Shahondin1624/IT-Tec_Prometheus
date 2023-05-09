@@ -9,6 +9,16 @@ services:
       - /home/pi/IT-Tec_Prometheus/prometheus:/etc/prometheus
       - prometheus-data:/prometheus
     command: --web.enable-lifecycle  --config.file=/home/pi/IT-Tec_Prometheus/prometheus/prometheus.yml
+   github-exporter:
+     image: infinitywork/github-exporter:latest
+     ports:
+       - 9171:9171
+     expose:
+       - 9171
+     tty: true
+     stdin_open: true
+     environment:
+       - ORGS: "KlaraOppenheimerSchule"
 
 volumes:
   prometheus-data:
