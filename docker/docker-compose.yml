@@ -6,9 +6,9 @@ services:
     ports:
       - "9000:9090"
     volumes:
-      - /home/pi/IT-Tec_Prometheus/prometheus:/etc/prometheus
+      - ../prometheus:/etc/prometheus
       - prometheus-data:/prometheus
-    command: --web.enable-lifecycle  --config.file=/home/pi/IT-Tec_Prometheus/prometheus/prometheus.yml
+    command: --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
   github-exporter:
     image: infinityworks/github-exporter:latest
     ports:
