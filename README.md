@@ -1,5 +1,11 @@
 # Prometheus Github-Monitoring an IT-Tec Project
 ## Preface
+Our goal is to monitor the github-page of [Klara Oppenheimer Schule](https://github.com/KlaraOppenheimerSchule). 
+For this we use [github-exporter-arm64](https://github.com/Shahondin1624/github-exporter-arm64) a fork of 
+[infinityworks/github-exporter](https://github.com/infinityworks/github-exporter) we created for arm64-based 
+CPU-architectures such as the Raspberry Pi. Furthermore we use [prom/prometheus](https://hub.docker.com/r/prom/prometheus) 
+to pull metrics such as commits from github-exporter-arm64. We aim to provide an automated deployment 
+script that requires as few user interactions as possible.
 ## Setup steps
 ### Requirements
 1. A Raspberry PI, connected to the internet
