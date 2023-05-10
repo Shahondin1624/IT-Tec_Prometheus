@@ -10,6 +10,9 @@ sudo apt install gnupg -y &&
 #Cloning the repository
 git clone https://github.com/Shahondin1624/IT-Tec_Prometheus &&
 chmod +x ./IT-Tec_Prometheus/scripts/configure_project.sh &&
+cd IT-Tec_Prometheus/ &&
+git config pull.rebase true &&
+cd ../ &&
 #configuring the docker repository in apt
 sudo install -m 0755 -d /etc/apt/keyrings -y &&
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg &&
@@ -29,4 +32,5 @@ sudo ufw allow 22/tcp &&
 sudo ufw allow 30090/tcp && 
 sudo ufw allow 9000/tcp &&
 sudo ufw allow 9090/tcp &&
+# sudo ufw allow 9171/tcp && should not be required, as the docker container should communicate locally
 sudo ufw enable

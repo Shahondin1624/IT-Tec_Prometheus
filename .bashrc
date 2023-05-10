@@ -94,6 +94,7 @@ fi
 alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 alias refresh='source .bashrc'
 alias please='sudo $(history -p !!)'
+alias pull='git pull origin'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
