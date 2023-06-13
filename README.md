@@ -3,11 +3,13 @@
 ## Preface
 
 Our goal is to monitor the github-page of [Klara Oppenheimer Schule](https://github.com/KlaraOppenheimerSchule). For
-this we use [github-exporter-arm64](https://github.com/Shahondin1624/github-exporter-arm64) a fork
+this we wanted to use [github-exporter-arm64](https://github.com/Shahondin1624/github-exporter-arm64) a fork
 of [infinityworks/github-exporter](https://github.com/infinityworks/github-exporter) we created for arm64-based
-CPU-architectures such as the Raspberry Pi. Furthermore we
+CPU-architectures such as the Raspberry Pi. However this tool was not able to provide the full functionality we required. 
+This lead us to create our own simple (and pretty limited) [exporter](https://github.com/Shahondin1624/github-exporter-arm64-rs).
+This exporter is able to retrieve all commits since a given date. Furthermore we
 use [prom/prometheus](https://hub.docker.com/r/prom/prometheus) to pull metrics such as commits from
-github-exporter-arm64. We aim to provide an automated deployment script that requires as few user interactions as
+github-exporter-arm64-rs. We aim to provide an automated deployment script that requires as few user interactions as
 possible.  
 The prometheus web interface can be accessed at http://<ip_of_your_raspberry>:9000
 
