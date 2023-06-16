@@ -11,7 +11,7 @@ This exporter is able to retrieve all commits since a given date. Furthermore we
 use [prom/prometheus](https://hub.docker.com/r/prom/prometheus) to pull metrics such as commits from
 github-exporter-arm64-rs. We aim to provide an automated deployment script that requires as few user interactions as
 possible.  
-The prometheus web interface can be accessed at http://<ip_of_your_raspberry>:9000
+The prometheus web interface can be accessed at ```http://<ip_of_your_raspberry>:9000```
 
 ## Setup steps
 
