@@ -4,4 +4,4 @@ cd github-exporter-arm64-rs/ &&
 docker build -t github-exporter-arm64 . && 
 cd .. &&
 cd ../docker &&
-sudo docker compose up -d
+sudo TOKEN="${1}" docker compose up -d #enter your github api-token here
