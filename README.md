@@ -88,7 +88,7 @@ cd scripts/
 
 ## Github exporter structure
 
-An exporter is an application that exposes data via http endpoint for Prometheus. Prometheus pulls this so called metrics periodically.  
+An exporter is an application that exposes data via a http endpoint for Prometheus. Prometheus pulls this so called metrics periodically.  
 Our exporter calls the Github REST API to get information about the [Klara Oppenheimer Schule](https://github.com/KlaraOppenheimerSchule) organisation. This json data is then processed to expose metrics in OpenMetrics format. This format is required for Prometheus.
 ### Github-exporter-arm64-rs
 
