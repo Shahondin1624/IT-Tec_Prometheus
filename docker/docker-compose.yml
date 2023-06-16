@@ -10,7 +10,7 @@ services:
       - prometheus-data:/prometheus
     command: --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
   github-exporter:
-    image: github-exporter-arm64
+    image: github-exporter-arm64-rs
     ports:
       - "9171:9171"
     expose:
@@ -19,6 +19,8 @@ services:
     stdin_open: true
     environment:
       - ORGS=KlaraOppenheimerSchule
+      - PORT=9171
+#      - TOKEN=TOKEN
 
 volumes:
   prometheus-data:
