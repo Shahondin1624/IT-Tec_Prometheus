@@ -85,12 +85,12 @@ cd scripts/
 ./ configure_project.sh
 ```
 
-## Github-exporter-arm64-rs
 
-To fetch exactly the data we want, we created our own simple (and pretty limited) exporter for Github in Rust. The exporter is able to export metrics of a specific Github Organization, in our case [Klara Oppenheimer Schule](https://github.com/KlaraOppenheimerSchule).  
-The exporter provides metrics such as total number of commits, total number of insertions, total number of delition over all repositories of the organisation. In addition it provides metrics for number of commits, number of insertions and number of deletions per repository.
-
-### Github exporter structure
+## Github exporter structure
 
 An exporter is an application that exposes data via http endpoint for Prometheus. Prometheus pulls this so called metrics periodically.  
 Our exporter calls the Github REST API to get information about the [Klara Oppenheimer Schule](https://github.com/KlaraOppenheimerSchule) organisation. This json data is then processed to expose metrics in OpenMetrics format. This format is required for Prometheus.
+### Github-exporter-arm64-rs
+
+To fetch exactly the data we want, we created our own simple (and pretty limited) exporter for Github in Rust. The exporter is able to export metrics of a specific Github Organization, in our case [Klara Oppenheimer Schule](https://github.com/KlaraOppenheimerSchule).  
+The exporter provides metrics such as total number of commits, total number of insertions, total number of delition over all repositories of the organisation. In addition it provides metrics for number of commits, number of insertions and number of deletions per repository.
