@@ -9,5 +9,5 @@ fi
 docker build -t github-exporter-arm64-rs . &&
 cd ../ &&
 cd IT-Tec_Prometheus/docker &&
-export TOKEN="${1}" &&
-sudo docker compose up -d #enter your github api-token here
+export TOKEN="${1}" && #enter your github api-token here
+sudo -E docker compose up -d
