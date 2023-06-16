@@ -79,10 +79,10 @@ sudo reboot now
 cd scripts/
 ```  
 
-7.2 run the script
-
+7.2 run the script  
+You need to pass your Github Access Token as the first parameter to the configuration script to get access to the Github API.
 ```
-./ configure_project.sh
+./ configure_project.sh TOKEN=<your Github Access Token>
 ```
 
 
