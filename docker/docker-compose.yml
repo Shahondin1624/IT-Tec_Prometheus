@@ -20,7 +20,7 @@ services:
     environment:
       - ORGS=KlaraOppenheimerSchule
       - PORT=9171
-#      - TOKEN=TOKEN
+      - TOKEN=${TOKEN}
 
 volumes:
   prometheus-data:
